@@ -1,0 +1,14 @@
+<?php
+/**
+ * Closes previous repeater row when new row is added.
+ * This is a pretty simple one worth mentioning (I hadn't seen it anywhere else). You can easily change which row (or rows) are closed by switching out 'last()'
+ * for something else. For example, 'prev()' will close the row before the previous row, and so on. You can also use this logic
+ * to create a button allowing end users to close all rows, etc.
+ */
+
+jQuery(document).ready(function( $ ) {
+    $('.cmb-add-group-row').on('click', function (e) {
+      $('.postbox.cmb-row.cmb-repeatable-grouping').last('.postbox.cmb-row.cmb-repeatable-grouping').addClass(' closed');
+
+    });
+});
